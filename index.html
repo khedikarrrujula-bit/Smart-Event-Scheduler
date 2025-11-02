@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Event Scheduler — Bellman-Ford Included</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Smart Event Scheduler & Budget Optimizer</h1>
+    <p>0/1 Knapsack • Activity Selection • Bellman-Ford Shortest Path Algorithm</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <h2>Add Event</h2>
+      <div class="grid">
+        <input id="name" placeholder="Event name" />
+        <input id="cost" type="number" placeholder="Cost" />
+        <input id="profit" type="number" placeholder="Profit" />
+        <input id="start" type="number" placeholder="Start time" />
+        <input id="end" type="number" placeholder="End time" />
+        <input id="x" type="number" placeholder="X coordinate" />
+        <input id="y" type="number" placeholder="Y coordinate" />
+      </div>
+      <div class="buttons">
+        <button id="addEventBtn">Add Event</button>
+        <button id="clearBtn">Clear All</button>
+      </div>
+    </section>
+
+    <section class="list">
+      <h2>Added Events</h2>
+      <div id="eventsContainer" class="cards">
+        <div class="empty-state">No events added yet</div>
+      </div>
+    </section>
+
+    <section class="settings">
+      <h2>Budget & Starting Point</h2>
+      <div class="grid">
+        <input id="budget" type="number" placeholder="Budget" />
+        <input id="startX" type="number" placeholder="Start X" />
+        <input id="startY" type="number" placeholder="Start Y" />
+      </div>
+      <div class="buttons">
+        <button id="runBtn">Run Algorithms</button>
+      </div>
+    </section>
+
+    <section id="results" class="results hidden">
+      <h2>Results</h2>
+      <div id="knapsack" class="result-box"></div>
+      <div id="schedule" class="result-box"></div>
+      <div id="bellmanford" class="result-box"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Uses 0/1 Knapsack (DP), Activity Selection (Greedy), and Bellman-Ford Algorithm</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
